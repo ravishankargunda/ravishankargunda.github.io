@@ -3,156 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Ravi Shankar Gunda</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#f4efe6;
+  color:#242424;
+  font-family:Arial,sans-serif;
 }
 
-body {
-  margin: 0;
-  background: #f5f0e7;
-  color: #252525;
-  font-family: Arial, sans-serif;
+.page{
+  max-width:760px;
+  margin:auto;
+  padding:34px 22px 50px;
 }
 
-.page {
-  max-width: 720px;
-  margin: auto;
-  padding: 42px 24px;
+.monogram{
+  width:62px;
+  height:62px;
+  border:1px solid #b28a45;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#9a7438;
+  font-family:Georgia,serif;
+  font-size:21px;
+  line-height:18px;
+  text-align:center;
+  margin-bottom:22px;
 }
 
-.monogram {
-  width: 70px;
-  height: 70px;
-  border: 1px solid #b28a45;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9b7538;
-  font-family: Georgia, serif;
-  font-size: 25px;
-  line-height: 22px;
-  text-align: center;
-  margin-bottom: 28px;
+h1{
+  font-family:Georgia,serif;
+  font-size:38px;
+  line-height:1.02;
+  margin:0 0 15px;
+  font-weight:normal;
 }
 
-h1 {
-  font-family: Georgia, serif;
-  font-size: 44px;
-  line-height: 1.05;
-  margin: 0 0 20px;
-  font-weight: normal;
+.role{
+  font-size:13px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  line-height:1.55;
 }
 
-.role {
-  font-weight: bold;
-  line-height: 1.6;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 14px;
+.ai{
+  color:#a47b39;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:12px;
+  margin-top:7px;
 }
 
-.ai {
-  color: #a57b37;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 14px;
-  margin-top: 8px;
+.bio{
+  font-size:16px;
+  line-height:1.65;
+  margin:23px 0;
 }
 
-.bio {
-  font-size: 17px;
-  line-height: 1.6;
-  margin: 28px 0;
+.actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
 }
 
-.actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.action{
+  background:rgba(255,255,255,.58);
+  border:1px solid #ddd2c1;
+  border-radius:12px;
+  padding:15px;
+  text-decoration:none;
+  color:#222;
+  font-weight:bold;
+  box-shadow:0 2px 9px rgba(0,0,0,.04);
 }
 
-.action {
-  background: rgba(255,255,255,.55);
-  border: 1px solid #ddd4c5;
-  border-radius: 12px;
-  padding: 17px;
-  text-decoration: none;
-  color: #222;
-  font-weight: bold;
-  box-shadow: 0 3px 10px rgba(0,0,0,.05);
+.action span{
+  display:block;
+  font-size:11px;
+  font-weight:normal;
+  color:#666;
+  margin-top:4px;
 }
 
-.action span {
-  display: block;
-  font-size: 12px;
-  font-weight: normal;
-  margin-top: 5px;
-  color: #555;
+.save{
+  grid-column:1/-1;
 }
 
-.save {
-  grid-column: 1 / -1;
+.section{
+  margin-top:42px;
 }
 
-.section {
-  margin-top: 45px;
+.section h2{
+  font-size:13px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  border-bottom:1px solid #c9a25b;
+  padding-bottom:9px;
+  margin-bottom:17px;
 }
 
-.section h2 {
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  border-bottom: 1px solid #c8a35e;
-  padding-bottom: 10px;
+.work-card{
+  background:rgba(255,255,255,.52);
+  border:1px solid #ddd3c4;
+  border-radius:14px;
+  overflow:hidden;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px rgba(0,0,0,.04);
 }
 
-.experience {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.work-card img{
+  display:block;
+  width:100%;
+  height:auto;
+  background:#fff;
 }
 
-.exp {
-  padding: 16px 0;
+.work-info{
+  padding:16px;
 }
 
-.exp strong {
-  display: block;
-  margin-bottom: 6px;
+.work-info strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:20px;
+  margin-bottom:5px;
 }
 
-footer {
-  margin-top: 50px;
-  border-top: 1px solid #d6cbb9;
-  padding-top: 22px;
-  text-align: center;
-  font-size: 12px;
-  color: #666;
+.work-info span{
+  font-size:13px;
+  color:#6a655d;
 }
 
-@media (max-width: 520px) {
-  h1 {
-    font-size: 38px;
-  }
+.experience{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
 
-  .actions {
-    grid-template-columns: 1fr;
-  }
+.exp{
+  padding:13px 0;
+  line-height:1.45;
+}
 
-  .save {
-    grid-column: auto;
-  }
+.exp strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.brand-block{
+  background:rgba(255,255,255,.42);
+  border-left:3px solid #b38b48;
+  padding:17px;
+  line-height:1.55;
+}
+
+.brand-block strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:20px;
+  margin-bottom:4px;
+}
+
+footer{
+  margin-top:48px;
+  border-top:1px solid #d8cdbb;
+  padding-top:20px;
+  text-align:center;
+  font-size:12px;
+  color:#6a665f;
+}
+
+@media(max-width:520px){
+  h1{font-size:34px}
+  .actions{grid-template-columns:1fr}
+  .save{grid-column:auto}
+  .experience{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
-
 <div class="page">
 
   <div class="monogram">R<br>SG</div>
@@ -176,32 +213,69 @@ footer {
   <div class="actions">
 
     <a class="action" href="tel:+919550505933">
-      ☎ Call
+      Call
       <span>+91 95505 05933</span>
     </a>
 
     <a class="action" href="https://wa.me/919550505933">
-      ◉ WhatsApp
+      WhatsApp
       <span>Start a conversation</span>
     </a>
 
     <a class="action" href="mailto:shanrg@outlook.com">
-      ✉ Email
+      Email
       <span>shanrg@outlook.com</span>
     </a>
 
     <a class="action"
        href="https://www.linkedin.com/in/ravi-shankar-gunda-b13596b">
-      in LinkedIn
+      LinkedIn
       <span>Professional profile</span>
     </a>
 
     <a class="action save"
        href="ravi-shankar-gunda.vcf"
        download>
-      ▣ Save Contact
-      <span>Add Ravi Shankar Gunda to your contacts</span>
+      Save Contact
+      <span>Add Ravi Shankar Gunda to contacts</span>
     </a>
+
+  </div>
+
+  <div class="section">
+    <h2>Selected Work</h2>
+
+    <div class="work-card">
+      <img src="portfolio_samsumo_flying_kick.png" alt="SamSumo character design">
+      <div class="work-info">
+        <strong>SamSumo</strong>
+        <span>Character Design · Animation Development</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <img src="portfolio_irondoor_concept.png" alt="IronDoor concept design">
+      <div class="work-info">
+        <strong>Mr. Door — IronDoor</strong>
+        <span>Original IP · Character &amp; Concept Development</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <img src="portfolio_bonsai_brochure_cover.jpg" alt="Amravati Bonsai Society brochure">
+      <div class="work-info">
+        <strong>Amravati Bonsai Society</strong>
+        <span>Brochure Design · Art Direction · Visual Development</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <img src="portfolio_krishna_barrage_sketch.jpg" alt="Krishna Barrage development sketch">
+      <div class="work-info">
+        <strong>Krishna Barrage</strong>
+        <span>Illustration · Visual Development</span>
+      </div>
+    </div>
 
   </div>
 
@@ -227,18 +301,28 @@ footer {
 
       <div class="exp">
         <strong>AI &amp; Creative Systems</strong>
-        AI-Native Workflows · Tools · Innovation
+        AI-Native Workflows · Creative Technology
       </div>
 
     </div>
   </div>
 
+  <div class="section">
+    <h2>Studio</h2>
+
+    <div class="brand-block">
+      <strong>GMTTriad Originals</strong>
+      Stories. Worlds. Narrative Intelligence.<br><br>
+      Creative development across original IP, visual storytelling,
+      animation and AI-native creative systems.
+    </div>
+  </div>
+
   <footer>
     Ravi Shankar Gunda<br>
-    Creative Direction · Design · Content · IP
+    Creative Direction · Graphic Design · Content · IP
   </footer>
 
 </div>
-
 </body>
 </html>
